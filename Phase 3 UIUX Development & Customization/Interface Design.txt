@@ -1,0 +1,91 @@
+/* ============================
+   SPORTS ZONE SERVICE PORTAL
+   ============================ */
+
+/* Header */
+.navbar,
+.navbar-default{
+    background:#0B3D91 !important;
+    border:none;
+}
+
+/* Portal Title */
+.navbar-brand{
+    color:#ffffff !important;
+    font-size:24px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* Replace Logo */
+.navbar-brand::before{
+    content:"🏆 Sports Zone";
+    color:#ffffff;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* Hide Default Logo */
+.navbar-brand img{
+    display:none;
+}
+
+/* Navigation Links */
+.navbar-default .navbar-nav>li>a{
+    color:#ffffff !important;
+    font-weight:600;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+    color:#FFD700 !important;
+}
+
+/* Buttons */
+.btn-primary{
+    background:#28A745 !important;
+    border-color:#28A745 !important;
+}
+
+.btn-primary:hover{
+    background:#218838 !important;
+}
+
+/* Homepage Banner */
+.sp-page-root{
+    background:#F5F7FA;
+}
+
+/* Cards */
+.panel,
+.card{
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Booking Widget */
+.booking-widget{
+    background:#ffffff;
+    border-radius:15px;
+    padding:20px;
+}
+
+/* Footer */
+footer{
+    background:#0B3D91;
+    color:#ffffff;
+    text-align:center;
+    padding:15px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.navbar-brand{
+    font-size:18px;
+}
+
+.navbar-brand::before{
+    font-size:18px;
+}
+
+}

@@ -1,0 +1,26 @@
+Activity 3: Testing the Sports Hall Booking Portal
+Log in to your ServiceNow Personal Developer Instance (PDI).
+Copy your ServiceNow instance URL.
+Example:
+          https://yourinstance.service-now.com
+
+Open a new browser tab and access the Service Portal by appending the portal URL suffix (sz) to your instance URL.
+
+Example:
+          https://yourinstance.service-now.com/sz
+
+The Sports Zone Service Portal homepage is displayed.
+Click Book Venue or Explore Venues.
+Select the desired sports facility (e.g., Basketball, Badminton, Table Tennis, etc.).
+Choose the booking date and available time slot.
+Enter the required booking details and click Proceed.
+You will be redirected to the Payment page.
+Select the preferred payment method, complete the payment, and click Submit.
+The system validates the booking and checks for slot availability.
+If the booking is successful:
+The reservation is stored in the Sports Hall Bookings table.
+The booking status is updated.
+A confirmation email containing the venue details, booking date, time slot, and payment information is automatically sent to the user.
+If enabled, a scheduled reminder email is sent before the booking start time.
+
+Users can later visit the My Bookings page to view, manage, or cancel their reservations. If a booking is cancelled, the Business Rule automatically deducts the 10% cancellation charge and updates the Refund Payment amount.

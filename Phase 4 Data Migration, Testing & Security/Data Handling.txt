@@ -1,0 +1,76 @@
+from datetime import datetime, timedelta
+
+
+class Booking:
+    def __init__(self, booking_id, customer_name, email, hall_name, start_time):
+        self.booking_id = booking_id
+        self.customer_name = customer_name
+        self.email = email
+        self.hall_name = hall_name
+        self.start_time = start_time
+        self.reminder_sent = False
+
+
+def send_email(booking):
+    print("=" * 50)
+    print("BOOKING REMINDER EMAIL")
+    print("=" * 50)
+    print(f"To       : {booking.email}")
+    print(f"Customer : {booking.customer_name}")
+    print(f"Venue    : {booking.hall_name}")
+    print(f"Time     : {booking.start_time.strftime('%d-%m-%Y %H:%M')}")
+    print()
+    print("Dear Customer,")
+    print("This is a reminder that your sports hall booking")
+    print("will begin in approximately 10 minutes.")
+    print("Please arrive on time.")
+    print()
+    print("Thank you!")
+    print("=" * 50)
+    booking.reminder_sent = True
+
+
+def scheduled_job(bookings):
+    now = datetime.now()
+
+    reminder_start = now + timedelta(minutes=5)
+    reminder_end = now + timedelta(minutes=10)
+
+    for booking in bookings:
+        if (
+            not booking.reminder_sent
+            and reminder_start <= booking.start_time <= reminder_end
+        ):
+            send_email(booking)
+
+
+def main():
+    bookings = [
+        Booking(
+            101,
+            "Rahul",
+            "rahul@example.com",
+            "Football Ground",
+            datetime.now() + timedelta(minutes=7),
+        ),
+        Booking(
+            102,
+            "Anjali",
+            "anjali@example.com",
+            "Cricket Ground",
+            datetime.now() + timedelta(minutes=20),
+        ),
+        Booking(
+            103,
+            "Kiran",
+            "kiran@example.com",
+            "Badminton Court",
+            datetime.now() + timedelta(minutes=8),
+        ),
+    ]
+
+    scheduled_job(bookings)
+
+
+if __name__ == "__main__":
+    main()

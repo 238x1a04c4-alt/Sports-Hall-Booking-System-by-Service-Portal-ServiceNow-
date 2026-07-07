@@ -1,0 +1,38 @@
+// Table Name
+var tableName = "u_sports_hall_bookings";
+
+createField("Hall Name","u_hall_name","string",40);
+createField("Booked By","u_booked_by","reference",32,"sys_user");
+createField("Start Time","u_start_time","glide_date_time",40);
+createField("End Time","u_end_time","glide_date_time",40);
+createField("Duration Hours","u_duration_hours","decimal",20);
+createField("Status","u_status","choice",40);
+createField("Purpose","u_purpose","string",100);
+createField("Instructions","u_instructions","string",1000);
+createField("Payment","u_payment","currency",20);
+createField("Refund Payment","u_refund_payment","currency",20);
+createField("Mode of Payment","u_mode_of_payment","string",40);
+createField("Mode of Refund","u_mode_of_refund","string",40);
+createField("Transaction Number","u_transaction_number","string",40);
+createField("Refund Status","u_refund_status","string",40);
+createField("Reason for Cancellation","u_reason_for_cancellation","string",255);
+createField("Reminder","u_reminder","boolean",40);
+
+function createField(label,name,type,maxLength,reference){
+
+    var dict = new GlideRecord('sys_dictionary');
+
+    dict.initialize();
+
+    dict.name = tableName;
+    dict.element = name;
+    dict.column_label = label;
+    dict.internal_type = type;
+    dict.max_length = maxLength;
+
+    if(type=="reference"){
+        dict.reference = reference;
+    }
+
+    dict.insert();
+}

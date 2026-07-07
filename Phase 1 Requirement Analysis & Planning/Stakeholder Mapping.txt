@@ -1,0 +1,28 @@
+# Sports Hall Booking System - Stakeholder Responsibilities
+
+def display_stakeholders():
+    stakeholders = [
+        ["End Users", "Book sports halls and manage reservations"],
+        ["Sports Hall Managers", "Approve bookings and manage availability"],
+        ["Facility Administration", "Monitor utilization and maintenance"]
+    ]
+
+    print("=" * 80)
+    print("           SPORTS HALL BOOKING SYSTEM")
+    print("         STAKEHOLDER RESPONSIBILITIES")
+    print("=" * 80)
+
+    # Print table header
+    print(f"{'Stakeholder':<30} {'Responsibility'}")
+    print("-" * 80)
+
+    # Print table rows
+    for stakeholder, responsibility in stakeholders:
+        print(f"{stakeholder:<30} {responsibility}")
+
+    print("=" * 80)
+
+
+# Main Program
+if __name__ == "__main__":
+    display_stakeholders()

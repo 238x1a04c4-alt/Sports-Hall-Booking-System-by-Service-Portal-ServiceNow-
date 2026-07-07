@@ -1,0 +1,66 @@
+# Sports Hall Booking System - Project Objectives
+
+def display_objectives():
+    objectives = {
+        "1. Objective": [
+            "Digitize the sports hall booking process using ServiceNow Service Portal.",
+            "Enable fast, transparent, and automated facility reservations."
+        ],
+
+        "2. Enhance User Convenience": [
+            "Provide a simple and intuitive booking experience via ServiceNow Service Portal.",
+            "Allow users to view available sports halls and time slots in real time.",
+            "Reduce manual booking requests and physical coordination.",
+            "Enable quick confirmation through automated notifications."
+        ],
+
+        "3. Improve Operational Efficiency": [
+            "Automate booking approvals and confirmations.",
+            "Eliminate double bookings through real-time availability checks.",
+            "Reduce administrative workload for sports facility managers.",
+            "Maintain centralized booking records for audit and tracking."
+        ],
+
+        "4. Enable Secure Digital Payments (Optional / Phase-Based)": [
+            "Support online payments for paid sports facilities.",
+            "Enable automated fee calculation based on duration and facility type.",
+            "Reduce cash handling and manual payment reconciliation."
+        ],
+
+        "5. Data Visibility & Reporting": [
+            "Track booking trends by sport, time slot, and location.",
+            "Identify peak usage hours and underutilized facilities.",
+            "Support data-driven decisions for maintenance and scheduling."
+        ],
+
+        "6. Promote Resource Optimization & Sustainability": [
+            "Optimize utilization of sports infrastructure.",
+            "Reduce paper-based booking registers.",
+            "Support eco-friendly and digital-first operations."
+        ]
+    }
+
+    print("=" * 70)
+    print("      SPORTS HALL BOOKING SYSTEM - PROJECT OBJECTIVES")
+    print("=" * 70)
+
+    for section, points in objectives.items():
+        print(f"\n{section}")
+        print("-" * len(section))
+        for point in points:
+            print(f"• {point}")
+
+    print("\n" + "=" * 70)
+    print("Project Summary")
+    print("=" * 70)
+    print("The Sports Hall Booking System developed using ServiceNow Service")
+    print("Portal provides an automated platform for booking sports facilities,")
+    print("improves operational efficiency, enhances user convenience, supports")
+    print("future digital payment integration, enables reporting, and promotes")
+    print("optimal utilization of sports infrastructure.")
+    print("=" * 70)
+
+
+# Main Program
+if __name__ == "__main__":
+    display_objectives()

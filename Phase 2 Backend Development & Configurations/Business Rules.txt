@@ -1,0 +1,29 @@
+(function executeRule(current, previous) {
+
+    // Execute only when booking is cancelled
+    if (current.u_status == "Cancelled") {
+
+        // Get payment amount
+        var payment = parseFloat(current.u_payment) || 0;
+
+        // Calculate 10% cancellation charge
+        var cancellationCharge = payment * 0.10;
+
+        // Calculate refund amount
+        var refundAmount = payment - cancellationCharge;
+
+        // Store refund amount
+        current.u_refund_payment = refundAmount;
+
+        // Store refund status
+        current.u_refund_status = "Refund Processed";
+
+        // Store mode of refund
+        current.u_mode_of_refund = current.u_mode_of_payment;
+
+        // Add work notes
+        current.work_notes = "Booking cancelled. 10% cancellation charge deducted. Refund Amount: " + refundAmount;
+
+    }
+
+})(current, previous);

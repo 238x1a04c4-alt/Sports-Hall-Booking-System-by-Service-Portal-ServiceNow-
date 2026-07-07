@@ -1,0 +1,61 @@
+# Sports Hall Booking System - Features Display
+
+def display_features():
+    features = {
+        "1. Widgets and Pages Configuration": [
+            "Sports Hall / Facility Name",
+            "Sport Type (Badminton, Basketball, Table Tennis, etc.)",
+            "Booking Date",
+            "Time Slot (Start Time – End Time)",
+            "User Contact Details"
+        ],
+
+        "2. Booking Validation & Availability": [
+            "Real-time validation of hall availability",
+            "Prevention of overlapping bookings",
+            "Configurable booking rules",
+            "Maximum booking duration",
+            "Advance booking limits"
+        ],
+
+        "3. Approval & Confirmation Workflow": [
+            "Optional approval from Sports Hall Manager",
+            "Booking Status: Pending",
+            "Booking Status: Approved",
+            "Booking Status: Rejected",
+            "Booking Status: Cancelled",
+            "Automatic email notifications to users and administrators"
+        ],
+
+        "4. Payment & Refund Handling": [
+            "Automatic fee calculation based on booking duration",
+            "Fee calculation based on selected sport",
+            "Cancellation charge logic (10% deduction)",
+            "Refund amount calculation",
+            "Refund details stored for future reference"
+        ]
+    }
+
+    print("=" * 75)
+    print("      SPORTS HALL BOOKING SYSTEM - KEY FEATURES")
+    print("=" * 75)
+
+    for module, details in features.items():
+        print(f"\n{module}")
+        print("-" * len(module))
+        for item in details:
+            print(f"• {item}")
+
+    print("\n" + "=" * 75)
+    print("Summary")
+    print("=" * 75)
+    print("The Sports Hall Booking System built on ServiceNow Service Portal")
+    print("provides a user-friendly booking interface, validates availability,")
+    print("supports automated approval workflows, and includes payment and")
+    print("refund management to ensure an efficient reservation process.")
+    print("=" * 75)
+
+
+# Run the program
+if __name__ == "__main__":
+    display_features()
